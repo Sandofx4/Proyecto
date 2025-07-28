@@ -57,18 +57,33 @@ public class GeneradorCitas {
 
     // 5. Asociar factura
     public void asociarFactura() {
-        System.out.print("Numero de cedula para facturar: ");
-        int id = Integer.parseInt(scanner.nextLine());
-        System.out.print("Número de factura: ");
-        String factura = scanner.nextLine();
-        for (Cita c : agenda) {
-            if (c.getId() == id) {
-                c.setFactura(factura);
-                System.out.println("Factura asociada correctamente.");
-                return;
+    System.out.print("Número de cédula para asociar factura: ");
+    int id = Integer.parseInt(scanner.nextLine());
+
+    for (Cita c : agenda) {
+        if (c.getId() == id) {
+            System.out.print("¿La cita tiene cobro? (si/no): ");
+            String respuesta = scanner.nextLine();
+
+            if (respuesta.equalsIgnoreCase("si")) {
+                System.out.print("Ingrese el monto del cobro: ");
+                double monto = Double.parseDouble(scanner.nextLine());
+
+                c.setTieneCobro(true);
+                c.setMonto(monto);
+
+                System.out.println(" Factura asociada con cobro: ₡" + monto);
+            } else {
+                c.setTieneCobro(false);
+                c.setMonto(0);
+                System.out.println(" Cita marcada como sin cobro.");
             }
+            return;
         }
-        System.out.println("Cita no encontrada para asociar factura.");
     }
+
+    System.out.println("Cita no encontrada para asociar factura.");
+}
+
     
 }
