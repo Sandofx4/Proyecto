@@ -46,11 +46,11 @@ public void setMonto(double monto) {
     @Override
 public String toString() {
     return "Cita(" +
-            "Cédula=" + id +
-            ", descripción='" + descripcion + '\'' +
+            "Cedula=" + id +
+            ", descripcion='" + descripcion + '\'' +
             (factura != null ? ", factura='" + factura + '\'' : "") +
             ", tieneCobro=" + tieneCobro +
-            (tieneCobro ? ", monto=₡" + monto : "") +
+            (tieneCobro ? ", monto=" + monto : "") +
             ')';
 }
 

@@ -15,7 +15,7 @@ public class BuscadorCita {
         }
 
         if (!encontrada) {
-            System.out.println("No se encontró ninguna cita con ese número de cédula.");
+            System.out.println("No se encontro ninguna cita con ese numero de cedula.");
         }
     }
 }
