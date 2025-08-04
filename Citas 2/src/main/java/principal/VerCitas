@@ -1,0 +1,22 @@
+package Principal;
+/**
+ *
+ * @author eylin
+ */
+public class VerCitas {
+    
+    public void verCitas() {
+    System.out.println("=== LISTADO DE CITAS ===");
+
+    if (agenda.size() == 0) {
+        System.out.println("No se encontraron citas en la agenda.");
+    } else {
+        for (int i = 0; i < agenda.size(); i++) {
+            Cita cita = agenda.get(i);
+            System.out.println("Cita #" + (i + 1) + ": " + cita.toString());
+        }
+    }
+
+    System.out.println("========================");
+}
+}
