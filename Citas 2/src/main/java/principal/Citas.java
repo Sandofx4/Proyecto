@@ -1,3 +1,8 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
+ */
+
 package principal;
 
 
@@ -13,14 +18,14 @@ public class Citas {
         int opcion;
 
         do {
-            System.out.println("\nMenu de gestion de citas:");
+            System.out.println("\nMenú de gestión de citas:");
             System.out.println("1. Generar nueva cita");
             System.out.println("2. Ver citas programadas");
             System.out.println("3. Eliminar cita");
-            System.out.println("4. Buscar cita especifica");
+            System.out.println("4. Buscar cita específica");
             System.out.println("5. Asociar factura a cita");
             System.out.println("6. Salir");
-            System.out.print("Seleccione una opcion: ");
+            System.out.print("Seleccione una opción: ");
             opcion = op.nextInt();
             op.nextLine(); 
 
@@ -44,7 +49,7 @@ public class Citas {
                     System.out.println("Gracias por usar el sistema de citas.");
                     break;
                 default:
-                    System.out.println("¡Opcion invalida! Intente nuevamente.");
+                    System.out.println("¡Opción inválida! Intente nuevamente.");
             }
         } while (opcion != 6);
     }
